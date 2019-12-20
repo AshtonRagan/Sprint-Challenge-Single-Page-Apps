@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+
+import CharacterList from "./CharacterList";
 
 export default function WelcomePage() {
+  const [chars, setchars] = useState({});
   return (
     <section className="welcome-page">
       <header>
@@ -10,6 +13,8 @@ export default function WelcomePage() {
           src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
           alt="rick"
         />
+
+        <CharacterList />
       </header>
     </section>
   );
